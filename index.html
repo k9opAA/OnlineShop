@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OnlineShop Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 border rounded-full  flex items-center justify-center text-white font-bold">
+            <img src="logo.png" alt="">
+          </div>
+          <span class="font-bold text-lg md:text-xl">Online<span class="font-semibold text-[#CE543F]">Shop</span></span>
+        </a>
+
+        <!-- Menu -->
+        <nav class="hidden md:flex items-center gap-6">
+            <a href="#home" 
+                class="text-gray-700 border-b-4 border-transparent hover:border-[#CE483F] hover:text-[#CE483F] transition-all duration-300"> Home
+            </a>
+            <a href="#products" 
+                class="text-gray-700 border-b-4 border-transparent hover:border-[#CE483F] hover:text-[#CE483F] transition-all duration-300"> Products
+            </a>
+            <a href="#reviews" 
+                class="text-gray-700 border-b-4 border-transparent hover:border-[#CE483F] hover:text-[#CE483F] transition-all duration-300"> Reviews
+            </a>
+            <a href="#contact" 
+                class="text-gray-700 border-b-4 border-transparent hover:border-[#CE483F] hover:text-[#CE483F] transition-all duration-300"> Contact
+            </a>
+        </nav>
+
+        <!-- CTA btn -->
+        <div class="hidden md:flex items-center gap-3">
+            <a href="#cta" class="px-4 py-2 bg-gradient-to-r from-[#BA4752] to-[#E1612E] 
+                text-white rounded-md hover:from-[#CE483F] hover:to-[#AD2734] transition-colors duration-300">
+                Join Now
+            </a>
+        </div>
+
+        <!-- For Mobile menu-->
+        <div class="md:hidden">
+          <input id="menu-toggle" type="checkbox" class="peer hidden" />
+          <label for="menu-toggle" class="p-2 rounded-md cursor-pointer border border-gray-200 inline-flex items-center">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </label>
+
+          <!-- Mobile Menu Click -->
+          <div class="absolute right-4 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 transform scale-95 opacity-0 pointer-events-none transition-all peer-checked:opacity-100 peer-checked:scale-100 peer-checked:pointer-events-auto">
+            <nav class="flex flex-col p-3 gap-2">
+              <a href="#home" class="px-3 py-2 rounded hover:bg-gray-100">Home</a>
+              <a href="#products" class="px-3 py-2 rounded hover:bg-gray-100">Products</a>
+              <a href="#reviews" class="px-3 py-2 rounded hover:bg-gray-100">Reviews</a>
+              <a href="#contact" class="px-3 py-2 rounded hover:bg-gray-100">Contact</a>
+              <a href="#cta" class="mt-2 px-3 py-2 bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white rounded hover:from-[#CE483F] hover:to-[#AD2734] transition-colors duration-300 text-center">Join Now</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="mt-6">
+
+    <!-- HERO Section -->
+    <section class="container mx-auto px-4 md:px-6">
+    <div class="relative overflow-hidden rounded-xl shadow-lg bg-white">
+
+        <!-- Slide 1 -->
+        <input class="hidden peer/slide1" type="radio" name="hero" id="slide-1" checked />
+        <div class="p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 items-center gap-6 hidden peer-checked/slide1:block">
+        <div class="md:flex md:justify-center md:gap-4">
+            <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">Quality Products, Trusted Service</h2>
+            <p class="mt-4 text-gray-600 max-w-xl">
+                We curate top-quality items for your everyday needs. Fast shipping and real customer reviews help you choose confidently.</p>
+            <div class="mt-6 flex gap-3">
+                <a href="#products" class="px-5 py-3 bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white rounded-md hover:from-[#CE483F] hover:to-[#AD2734]">Shop Products</a>
+                <a href="#reviews" class="px-5 py-3 border border-gray-200 rounded-md hover:bg-gray-50">See Reviews</a>
+            </div>
+            </div>
+            <div class="sm:mt-4">
+            <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hero 1" class="w-full max-w-md rounded-lg shadow-md object-cover">
+            </div>
+        </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <input class="hidden peer/slide2" type="radio" name="hero" id="slide-2" />
+        <div class="p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 items-center gap-6 hidden peer-checked/slide2:block">
+        <div class="md:flex md:justify-center md:gap-4">
+            <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">Innovative Design, Unmatched Comfort</h2>
+            <p class="mt-4 text-gray-600 max-w-xl">Experience products that blend style and comfort perfectly. Our design team ensures every piece meets your lifestyle.</p>
+            <div class="mt-6 flex gap-3">
+                <a href="#products" class="px-5 py-3 bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white rounded-md hover:from-[#CE483F] hover:to-[#AD2734]">Shop Products</a>
+                <a href="#reviews" class="px-5 py-3 border border-gray-200 rounded-md hover:bg-gray-50">See Reviews</a>
+            </div>
+            </div>
+            <div class="sm:mt-4">
+            <img src="https://images.unsplash.com/photo-1637264486270-3238d60aa71a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hero 2" class="w-full max-w-md rounded-lg shadow-md object-cover">
+            </div>
+        </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <input class="hidden peer/slide3" type="radio" name="hero" id="slide-3" />
+        <div class="p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 items-center gap-6 hidden peer-checked/slide3:block">
+        <div class="md:flex md:justify-center md:gap-4">
+            <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">Sustainable Choices for a Better Tomorrow</h2>
+            <p class="mt-4 text-gray-600 max-w-xl">Shop eco-friendly products that make a difference. Quality and sustainability go hand-in-hand with every purchase.</p>
+            <div class="mt-6 flex gap-3">
+                <a href="#products" class="px-5 py-3 bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white rounded-md hover:from-[#CE483F] hover:to-[#AD2734]">Shop Products</a>
+                <a href="#reviews" class="px-5 py-3 border border-gray-200 rounded-md hover:bg-gray-50">See Reviews</a>
+            </div>
+            </div>
+            <div class="sm:mt-4">
+            <img src="https://images.unsplash.com/photo-1518825059470-fce76c93d450?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hero 3" class="w-full max-w-md rounded-lg shadow-md object-cover">
+            </div>
+        </div>
+        </div>
+
+        <!-- Slide btn -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
+        <label for="slide-1" class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer peer-checked/slide1:bg-indigo-600"></label>
+        <label for="slide-2" class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer peer-checked/slide2:bg-indigo-600"></label>
+        <label for="slide-3" class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer peer-checked/slide3:bg-indigo-600"></label>
+        </div>
+
+  </div>
+</section>
+
+
+    <!-- Products Section-->
+    <section id="products" class="container mx-auto px-4 md:px-6 mt-12">
+        <div class="mb-6 text-center">
+            <h3 class="text-2xl font-bold">Featured Products</h3>
+        </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://media.gq.com/photos/6719402ab1f4bc05f5cdae75/master/w_2560%2Cc_limit/1024-GQR-Jean%2520Jackets-1127.jpg" alt="Product 1">
+          <div class="p-4">
+            <h4 class="font-semibold">Men’s Denim Jacket</h4>
+            <p class="text-sm text-gray-500 mt-2">Classic blue denim jacket, all-season wear.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 1,850</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://img.drz.lazcdn.com/static/bd/p/ff0d3714f55aba1bd1f58668eb9627fe.png_960x960q80.png_.webp" alt="Product 2">
+          <div class="p-4">
+            <h4 class="font-semibold">Men’s Summer Dress</h4>
+            <p class="text-sm text-gray-500 mt-2">Light floral dress perfect for summer outings.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 1,450</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://toffpark.com/wp-content/uploads/2024/12/korean-style-versatile-canvas-casual-shoe-black_1.jpg" alt="Product 3">
+          <div class="p-4">
+            <h4 class="font-semibold">Casual Sneakers</h4>
+            <p class="text-sm text-gray-500 mt-2">Comfortable sneakers for everyday wear.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 2,200</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://toptenmartltd.com/wp-content/uploads/2024/02/web1.jpg" alt="Product 4">
+          <div class="p-4">
+            <h4 class="font-semibold">Men’s Formal Shirt</h4>
+            <p class="text-sm text-gray-500 mt-2">Slim fit cotton shirt for office & events.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 1,250</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://m.media-amazon.com/images/I/61mOhMVs5YL._UY1000_.jpg" alt="Product 5">
+          <div class="p-4">
+            <h4 class="font-semibold">Women’s Handbag</h4>
+            <p class="text-sm text-gray-500 mt-2">Stylish leather handbag with spacious compartments</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 1,990</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://img.drz.lazcdn.com/static/bd/p/646eff309611041e990f3f591c5b266a.jpg_720x720q80.jpg" alt="Product 6">
+          <div class="p-4">
+            <h4 class="font-semibold">Men’s Sunglasses</h4>
+            <p class="text-sm text-gray-500 mt-2">UV-protected stylish sunglasses.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 999</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://img.drz.lazcdn.com/static/bd/p/b874a07945286330cbe95bf1f9caf711.jpg_960x960q80.jpg_.webp" alt="Product 7">
+          <div class="p-4">
+            <h4 class="font-semibold">Unisex Hoodie</h4>
+            <p class="text-sm text-gray-500 mt-2">Soft fleece hoodie, perfect for casual looks.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 1,650</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://cdnmedia.racquets4u.com/media/iopt/catalog/product/cache/cd3f430ba3d61418b233993754ed59dd/h/e/head-hts-837-tracksuit-m.webp" alt="Product 8">
+          <div class="p-4">
+            <h4 class="font-semibold">Sports Tracksuit</h4>
+            <p class="text-sm text-gray-500 mt-2">Breathable tracksuit for workouts & jogging.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 2,750</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition overflow-hidden">
+          <img class="w-full h-48 object-cover" src="https://images.squarespace-cdn.com/content/v1/5ed6e10fb011a123217ba702/1727139534806-K219WNSVFLFTG6QOO2I3/unsplash-image-164_6wVEHfI.jpg" alt="Product 9">
+          <div class="p-4">
+            <h4 class="font-semibold">Men's Nike Shoe</h4>
+            <p class="text-sm text-gray-500 mt-2">Comfortable sneakers for everyday wear.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-lg font-bold text-[#CE483F]">৳ 3,500</div>
+              <a href="#" class="px-3 py-1 rounded bg-gradient-to-r from-[#BA4752] to-[#E1612E] text-white text-sm hover:from-[#CE483F] hover:to-[#AD2734]">Buy Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section id="reviews" class="container mx-auto px-4 md:px-6 mt-12">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold">What Customers Say</h3>
+        <p class="text-gray-500 mt-2">Real feedback from real customers</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <figure class="bg-white rounded-lg p-6 shadow-sm">
+          <div class="flex items-center gap-4">
+            <img class="w-14 h-14 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abc" alt="Customer 1">
+            <div>
+              <figcaption class="font-semibold">Ayesha Rahman</figcaption>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                <!-- 5 star -->
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+              </div>
+            </div>
+          </div>
+          <blockquote class="mt-4 text-gray-600">"Fits perfectly and looks very stylish. Great for casual hangouts."</blockquote>
+        </figure>
+
+        <!-- Review 2 -->
+        <figure class="bg-white rounded-lg p-6 shadow-sm">
+          <div class="flex items-center gap-4">
+            <img class="w-14 h-14 rounded-full object-cover" src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80" alt="Customer 2">
+            <div>
+              <figcaption class="font-semibold">Farhan Ahmed</figcaption>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+              </div>
+            </div>
+          </div>
+          <blockquote class="mt-4 text-gray-600">"Good quality for the price, but the pocket could be a bit deeper."</blockquote>
+        </figure>
+
+        <!-- Review 3 -->
+        <figure class="bg-white rounded-lg p-6 shadow-sm">
+          <div class="flex items-center gap-4">
+            <img class="w-14 h-14 rounded-full object-cover" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ghi" alt="Customer 3">
+            <div>
+              <figcaption class="font-semibold">Iqbal Khan</figcaption>
+              <div class="flex items-center text-yellow-400 text-sm mt-1">
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+                <svg class="w-4 h-4 inline-block opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.574-.956L10 0l2.938 5.954 6.574.956-4.756 4.635 1.122 6.545z"/></svg>
+              </div>
+            </div>
+          </div>
+          <blockquote class="mt-4 text-gray-600">"Helpful support and easy returns. The packaging was excellent as well."</blockquote>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contact Section-->
+    <section id="contact" class="container mx-auto px-4 md:px-6 mt-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <!-- Contact Info -->
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h4 class="text-xl font-semibold mb-3">Contact Information</h4>
+          <p class="text-gray-600">We’re here to help. Reach out for product questions, order support, or collaboration inquiries.</p>
+
+          <ul class="mt-6 space-y-4">
+            <li class="flex items-start gap-3">
+                <div class="w-10 h-10 border rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="placeholder.png" alt="" class="w-6 object-cover">
+                </div>
+              <div>
+                <div class="text-sm text-gray-500">Address</div>
+                <div class="font-medium">Road 7, Chittagong, Bangladesh</div>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3">
+                <div class="w-10 h-10 border rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="gmail.png" alt="" class="w-6 object-cover">
+                </div>
+              <div>
+                <div class="text-sm text-gray-500">Email</div>
+                <div class="font-medium">support@online-shop.example</div>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <div class="w-10 h-10 border rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="telephone.png" alt="" class="w-6 object-cover">
+                </div>
+              <div>
+                <div class="text-sm text-gray-500">Phone</div>
+                <div class="font-medium">+880 1234 567890</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="bg-white p-6 rounded-lg shadow-sm" action="#" method="post" novalidate>
+          <h4 class="text-xl font-semibold mb-3">Send a Message</h4>
+          <div class="grid grid-cols-1 gap-4">
+            <label class="block">
+              <span class="text-sm text-gray-600">Name</span>
+              <input type="text" name="name" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="Your name">
+            </label>
+
+            <label class="block">
+              <span class="text-sm text-gray-600">Email</span>
+              <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="you@example.com">
+            </label>
+
+            <label class="block">
+              <span class="text-sm text-gray-600">Message</span>
+              <textarea name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="Write your message..."></textarea>
+            </label>
+
+            <div class="flex items-center gap-3">
+              <button type="submit" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 duration-300 text-white rounded-md">Send Message</button>
+              <button type="reset" class="px-4 py-2 border border-gray-200 rounded-md hover:bg-gray-50">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section id="cta" class="mt-12">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="rounded-xl bg-gradient-to-r from-[#BA4752] to-[#E1612E] hover:from-[#CE483F] hover:to-[#AD2734] transition-colors duration-300 text-white p-8 md:p-12 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 class="text-2xl md:text-3xl font-extrabold">Join our community for exclusive deals</h3>
+            <p class="mt-2 text-indigo-100 max-w-lg">Subscribe and receive 10% off your first order, early access to sales, and curated product picks.</p>
+          </div>
+          <form class="w-full md:w-auto flex gap-2">
+            <label for="subscribe" class="sr-only">Email</label>
+            <input id="subscribe" type="email" placeholder="Enter your email" class="rounded-md px-4 py-2 w-full md:w-80 text-gray-800" required>
+            <button class="px-4 py-2 bg-white text-[#CE483F] rounded-md font-semibold hover:opacity-95">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-12 bg-white border-t border-gray-200">
+    <div class="container mx-auto px-4 md:px-6 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 border rounded-full  flex items-center justify-center text-white font-bold">
+            <img src="logo.png" alt="">
+          </div>
+          <div>
+            <div class="font-semibold">OnlineShop</div>
+            <div class="text-sm text-gray-500">© 2025 OnlineShop. All rights reserved.</div>
+          </div>
+        </div>
+
+        <nav class="flex gap-4">
+          <a href="#home" class="text-gray-700 border-b-4 border-transparent hover:border-[#CE483F] hover:text-[#CE483F] transition-all duration-300"> Home </a>
+          <a href="#home" class="text-gray-700 border-b-4 border-transparent hover:border-[#CE483F] hover:text-[#CE483F] transition-all duration-300"> About </a>
+          <a href="#home" class="text-gray-700 border-b-4 border-transparent hover:border-[#CE483F] hover:text-[#CE483F] transition-all duration-300"> Contact </a>
+        </nav>
+
+        <div class="flex gap-3 items-center">
+          <!-- Social icons -->
+          <a href="#" class="p-2 rounded-full hover:bg-gray-100">
+            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.86v-6.99h-2.4v-2.87h2.4V9.1c0-2.37 1.4-3.68 3.56-3.68 1.03 0 2.11.18 2.11.18v2.32h-1.19c-1.17 0-1.53.72-1.53 1.46v1.75h2.6l-.42 2.87h-2.18V21.9A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="#" class="p-2 rounded-full hover:bg-gray-100">
+            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24"><path d="M22 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.6 0-4.7 2.2-4.7 4.9 0 .38.03.76.12 1.12C7.7 9 4.1 7.1 1.67 4a4.93 4.93 0 00-.64 2.47c0 1.7.83 3.2 2.1 4.07A4.46 4.46 0 012 10v.06c0 2.38 1.68 4.36 3.9 4.82a4.52 4.52 0 01-2.1.08c.59 1.8 2.3 3.1 4.32 3.14A9 9 0 010 19.54a12.78 12.78 0 006.92 2.03c8.31 0 12.86-7.06 12.86-13.18v-.6A9.3 9.3 0 0022 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
